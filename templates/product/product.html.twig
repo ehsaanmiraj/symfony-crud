@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="mt-4 col-sm-6">
+       {{ form_start(form, {'attr': {'action': path('create_product')}} ) }}
+            <div class="form-group">
+                {# {{ form_label(form.id) }}
+                {{ form_widget(form.id) }} #}
+                {{ form_label(form.name) }}
+                {{ form_widget(form.name) }}
+                {{ form_label(form.price) }}
+                {{ form_widget(form.price) }}
+            </div>
+            <button type="submit" class="btn btn-primary form-control mt-2">Save</button>
+       {{ form_end(form) }}
+    </div>
+{% endblock %}
